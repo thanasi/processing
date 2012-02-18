@@ -1,24 +1,26 @@
-import processing.pdf.*;
+//import processing.pdf.*;
 
 color bgcolor = color(4,131,224);
 color textcolor = color (255,255,255);
-int imwidth = 300;
-int imheight = 300;
+int imwidth = 16;
+int imheight = 16;
 
 String name = "dvl";
 int len = name.length();
 PFont f;
-float fontheight = 100;
+float fontheight = max(imheight / 3,10);
 
 float x,y;
 
 void setup(){
-  size(300,300,PDF,"logo.pdf");
-  f = createFont("Dotum",100);
+  //size(imwidth,imheight,PDF,"logo_"+imwidth+"x"+imheight+".pdf");
+  size(imwidth,imheight);
+  f = createFont("Dotum",fontheight);
 }
 
 void draw(){
   textFont(f,fontheight);
+  background(bgcolor);
   fill(textcolor);
 
   x = 0;
@@ -30,6 +32,8 @@ void draw(){
     y = (i+1)*imheight/4 + fontheight/3;
     text(string,x,y);
   }
+  
+  saveFrame("logo_"+imwidth+"x"+imheight+".png");
   println("Done");
   exit();
 }
