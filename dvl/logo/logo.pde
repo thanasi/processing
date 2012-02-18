@@ -1,7 +1,7 @@
 //import processing.pdf.*;
 
-color bgcolor = color(4,131,224);
-color textcolor = color (255,255,255);
+color bgcolor = color(12,122,255);
+color textcolor = color(255,255,255);
 int imwidth = 16;
 int imheight = 16;
 
