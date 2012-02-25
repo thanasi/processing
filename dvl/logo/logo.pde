@@ -2,8 +2,8 @@
 
 color bgcolor = color(12,122,255);
 color textcolor = color(255,255,255);
-int imwidth = 16;
-int imheight = 16;
+int imwidth = 100;
+int imheight = 100;
 
 String name = "dvl";
 int len = name.length();
